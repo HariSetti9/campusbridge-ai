@@ -2,6 +2,10 @@
 
 *Opportunities should have no language barrier.*
 
+## Live App
+
+🚀 **Try CampusBridge AI:** https://campusbridge-ai.streamlit.app/
+
 ## The Problem
 
 Students don't always miss opportunities because they lack talent. Sometimes
@@ -100,7 +104,7 @@ so the UI only calls the AI when the user explicitly requests it.
 ## Local Setup
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/HariSetti9/campusbridge-ai.git
 cd campusbridge-ai
 python -m venv venv
 source venv/bin/activate    # Windows: venv\Scripts\activate
@@ -122,7 +126,7 @@ streamlit run app.py
 
 ## Team
 
-_Add participant information here._
+**Hari Setti** — Developer
 
 ---
 
