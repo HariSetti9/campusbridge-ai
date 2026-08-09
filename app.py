@@ -44,11 +44,17 @@ CUSTOM_CSS = """
     .block-container { padding-top: 2.2rem; max-width: 880px; }
     h1, h2, h3, h4 { letter-spacing: -0.01em; }
     .cb-hero-title { font-size: 2.1rem; font-weight: 700; margin-bottom: 0.1rem; }
-    .cb-hero-tagline { font-size: 1.05rem; color: #6b7280; margin-bottom: 0.3rem; }
-    .cb-hero-desc { font-size: 0.98rem; color: #374151; margin-bottom: 0.5rem; }
+    /* No hardcoded color here — this text sits on the page background, which
+       already adapts to light/dark theme, unlike the cards above. */
+    .cb-hero-tagline { font-size: 1.05rem; opacity: 0.7; margin-bottom: 0.3rem; }
+    .cb-hero-desc { font-size: 0.98rem; opacity: 0.85; margin-bottom: 0.5rem; }
     .cb-feature-line { font-size: 0.85rem; color: #6366f1; font-weight: 600; margin-bottom: 1.3rem; }
+    /* These cards always use a light background regardless of the user's
+       Streamlit theme, so their text must always be dark — otherwise dark
+       mode's default white text becomes invisible on these light cards. */
     .cb-card {
         background: #ffffff;
+        color: #1f2937;
         border: 1px solid #e5e7eb;
         border-radius: 14px;
         padding: 1.1rem 1.3rem;
@@ -63,8 +69,12 @@ CUSTOM_CSS = """
         letter-spacing: 0.04em;
         color: #6366f1;
     }
+    .cb-card ul, .cb-card ol, .cb-card li, .cb-card p, .cb-card span {
+        color: #1f2937;
+    }
     .cb-mini-card {
         background: #f9fafb;
+        color: #1f2937;
         border: 1px solid #eef0f3;
         border-radius: 12px;
         padding: 0.7rem 0.9rem;
@@ -99,11 +109,13 @@ CUSTOM_CSS = """
     }
     .cb-next-card {
         background: #fafafa;
+        color: #1f2937;
         border: 1px dashed #d1d5db;
         border-radius: 12px;
         padding: 0.8rem 1rem;
         margin-top: 1rem;
     }
+    .cb-next-card b { color: #111827; }
     .cb-verdict-eligible { color: #15803d; font-weight: 700; }
     .cb-verdict-uncertain { color: #b45309; font-weight: 700; }
     .cb-verdict-not { color: #b91c1c; font-weight: 700; }
