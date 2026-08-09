@@ -1,0 +1,8 @@
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.pyc
+venv/
+.venv/
+campusbridge.db
+.DS_Store
